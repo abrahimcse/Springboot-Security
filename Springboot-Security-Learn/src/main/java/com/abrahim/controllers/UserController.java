@@ -20,19 +20,19 @@ public class UserController {
 
   //all users
   @GetMapping("/")
-  public List<User> getAllUser(){
+  public List<User> getAllUser() {
     return this.userService.getAllUser();
   }
 
   //Return Single User
 
   @GetMapping("/{username}")
-  public User getUser( @PathVariable("username") String username){
+  public User getUser(@PathVariable("username") String username) {
     return this.userService.getUser(username);
   }
 
   @PostMapping("/")
-  public User add(@RequestBody User user){
+  public User add(@RequestBody User user) {
     return this.userService.addUser(user);
   }
 }
